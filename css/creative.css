@@ -474,3 +474,17 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #222;
 }
+
+/* About Me section */
+#about {
+    background-color: #f4f7f9;
+    color: #222;
+}
+
+#about .text-faded {
+    color: #555;
+}
+
+#about hr.light {
+    border-color: #1877f2;
+}
