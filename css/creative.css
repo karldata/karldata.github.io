@@ -488,3 +488,25 @@ body {
 #about hr.light {
     border-color: #1877f2;
 }
+/* Navigation for project/subpages */
+@media(min-width:768px) {
+
+    .navbar-default.subpage-nav {
+        background-color: #fff;
+        border-color: rgba(34,34,34,.05);
+    }
+
+    .navbar-default.subpage-nav .navbar-header .navbar-brand {
+        color: #222;
+    }
+
+    .navbar-default.subpage-nav .nav > li > a,
+    .navbar-default.subpage-nav .nav > li > a:focus {
+        color: #222;
+    }
+
+    .navbar-default.subpage-nav .navbar-header .navbar-brand:hover,
+    .navbar-default.subpage-nav .nav > li > a:hover {
+        color: #1877f2;
+    }
+}
