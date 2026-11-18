@@ -33,6 +33,30 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <style>
+      /* Consistent three-column project cards, independent of original image proportions. */
+      .projects-section { padding: 45px 0 65px; }
+      .projects-grid { display: flex; flex-wrap: wrap; margin-top: 30px; }
+      .project-column { display: flex; margin-bottom: 28px; }
+      .project-card { display: flex; flex-direction: column; width: 100%; padding: 0 12px; }
+      .project-media { display: flex; align-items: center; justify-content: center; overflow: hidden; width: 100%; height: 230px; background: #e9f2fc; border: 1px solid #d7e4f3; }
+      .project-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .project-media-icon { color: #1877f2; text-decoration: none; }
+      .project-media-icon .fa { font-size: 75px; }
+      .project-media-icon:hover, .project-media-icon:focus { color: #145bbc; }
+      .project-card h3 { font-size: 22px; line-height: 1.35; text-align: center; min-height: 60px; margin: 20px 0 12px; }
+      .project-card h3 a { color: #f05f40; }
+      .project-description { font-size: 14px; line-height: 1.6; color: #737373; margin: 0 0 14px; flex-grow: 1; }
+      .project-status { color: #737373; font-size: 14px; font-weight: 700; min-height: 22px; margin: 0 0 16px; }
+      @media (max-width: 767px) {
+        .projects-grid { display: block; }
+        .project-column { display: block; margin-bottom: 40px; }
+        .project-card { padding: 0 10px; }
+        .project-card h3 { min-height: 0; }
+        .project-description { flex-grow: 0; }
+        .project-media { height: 220px; }
+      }
+    </style>
 </head>
 
 <body id="page-top">
@@ -163,211 +187,44 @@
         </div>
     </section> -->
     
-    <section class="no-padding" id="projects">
-      <div class="container" style="padding-top: 20px">
-          <div class="row">
-              <div class="col-lg-12 text-center">
-                  <h2 class="section-heading"><b>PROJECTS</b></h2>
-                  <hr class="primary">
-              </div>
-          </div>
+    <section id="projects" class="projects-section">
+  <div class="container-fluid">
+    <h2 class="section-heading text-center"><b>PROJECTS</b></h2>
+    <hr class="primary">
+    <div class="row projects-grid">
+      <div class="col-sm-4 project-column">
+        <article class="project-card">
+          <a class="project-media" href="NHSGE.html" aria-label="View Exploratory Data Analysis">
+            <img src="img/National-graduation-exam.jpg" alt="Students taking the National High School Graduation Examination">
+          </a>
+          <h3><a href="NHSGE.html">Exploratory Data Analysis</a></h3>
+          <p class="project-description">A Vietnamese journalist needs to know some insights of the National High School Graduation Examination test in 2020. This project supports him in writing an article based on web scraping and exploratory data analysis.</p>
+          <p class="project-status" aria-hidden="true">&nbsp;</p>
+        </article>
       </div>
-        <div class="container-fluid">
-            <div class="row no-gutter">
-
-                <!-- Begin of Product Manager -->
-                <!-- <div class="col-lg-3 col-lg-offset-1 coldcol-sm-4">
-                    <div style="width :95%">
-                        <a href="hydrobase.html" class="portfolio-box" >
-                            <img src="img/hydrobase.png" class="img-responsive" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="portfolio-box-caption-content">
-                                  <div class="project-category text-faded">
-                                      Internet of things
-                                  </div>
-                                    <div class="project-name">
-                                        Hydrobase
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <h3 style="text-align: center">Product Manager</h3></br>
-                        <p class="text-muted" style="font-size: small"> A control system and an analytics engine to help plants grow</p>
-                        <!--b class="text-muted">Accepted Poster at IEEE Viz Conference 2015!</b-->
-                    <!-- </div>
-                </div> -->
-                <!-- End  of Product Manager -->
-                
-                <!-- Begin Predictive Analytics -->
-                <div class="col-sm-4">
-                    <div style="width:95%; margin:0 auto 30px;">
-                        <a href="NHSGE.html" class="portfolio-box">
-                            <img src="img/National-graduation-exam.jpg" class="img-responsive" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="portfolio-box-caption-content">
-                                  <div class="project-category text-faded">
-                                      Information Visualization
-                                  </div>
-                                    <div class="project-name">
-                                        2020 National High School Graduation Examination Analysis
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <h3 style="text-align: center"><a href="NHSGE.html">Exploratory Data Analysis</a></h3></br>
-                        <p class="text-muted" style="font-size: small"> A Vietnamese journalist needs to know some insights of the National High School Graduation Examination test in 2020. This project supports him in writing an article based on web scraping and exploratory data analysis.</p>
-                        <p><a href="NHSGE.html">View project page &rarr;</a></p>
-                        <!--b class="text-muted">Accepted Poster at IEEE Viz Conference 2015!</b-->
-                    </div>
-                </div>
-                <!-- End  of Predictive Analytics -->
-
-                <!-- MSc research placeholder -->
-                <div class="col-sm-4">
-                    <article style="width:95%; margin:0 auto 30px;">
-                        <a href="hypertension-stroke.html" class="portfolio-box" style="height:230px; background:#e9f2fc; border:1px solid #d7e4f3; display:flex; justify-content:center; align-items:center; text-align:center; text-decoration:none;">
-                            <span aria-hidden="true" class="fa fa-heartbeat" style="font-size:75px; color:#1877f2;"></span>
-                        </a>
-                        <h3 style="text-align:center;font-size:22px"><a href="hypertension-stroke.html">Hypertension and Stroke — MSc Research</a></h3>
-                        <p class="text-muted" style="font-size:small">MSc Applied Statistics research using NHANES data. The project page is ready for methodology, results, and visualizations.</p>
-                        <p class="text-muted" style="font-size:small"><strong>Work in progress</strong></p>
-                        <p><a href="hypertension-stroke.html">View project page &rarr;</a></p>
-                    </article>
-                </div>
-                <!-- Billing dispute and churn placeholder -->
-                <div class="col-sm-4">
-                    <article style="width:95%; margin:0 auto 30px;">
-                        <a href="billing-disputes-churn.html" class="portfolio-box" style="height:230px; background:#e9f2fc; border:1px solid #d7e4f3; display:flex; justify-content:center; align-items:center; text-align:center; text-decoration:none;">
-                            <span aria-hidden="true" class="fa fa-line-chart" style="font-size:75px; color:#1877f2;"></span>
-                        </a>
-                        <h3 style="text-align:center;font-size:22px"><a href="billing-disputes-churn.html">Do Billing Disputes Cause Customer Churn?</a></h3>
-                        <p class="text-muted" style="font-size:small">A customer analytics project exploring whether billing disputes are associated with customer churn. Findings will be added later.</p>
-                        <p class="text-muted" style="font-size:small"><strong>Work in progress</strong></p>
-                        <p><a href="billing-disputes-churn.html">View project page &rarr;</a></p>
-                    </article>
-                </div>
-
-
-                <!-- Begin of  Data Mining and Analytcis -->
-                <!-- <div class="col-lg-3 col-lg-offset-1 col-sm-4">
-                    <div style="width :95%">
-                        <a href="nyce.html" class="portfolio-box">
-                            <img src="img/NYCe.png" class="img-responsive" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="portfolio-box-caption-content">
-                                    <div class="project-category text-faded">
-                                        Data Mining and Analytcis
-                                    </div>
-                                    <div class="project-name">
-                                        NYCe Taxi
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <h3 style="text-align: center">Machine Learning Engineer</h3></br>
-                        <p class="text-muted" style="font-size: small">The best tool to predict the Tip of a New York Taxi cab driver.</p>
-                        <!--b class="text-muted">Pay Smart!</b-->
-                    <!-- </div>
-                </div> -->
-                <!-- End of  Data Mining and Analytcis -->
-
-                <!-- Begin of Web Architechture -->
-                <!-- <div class="col-lg-3 col-lg-offset-1 col-sm-4">
-                    <div style="width :95%">
-                        <a href="memeoke.html" class="portfolio-box">
-                            <img src="img/memeoke.png"  class="img-responsive" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="portfolio-box-caption-content">
-                                    <div class="project-category text-faded">
-                                        Web Architechture
-                                    </div>
-                                    <div class="project-name">
-                                        Memeoke
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <h3 style="text-align: center">Backend Developer</h3></br>
-                        <p class="text-muted" style="font-size: small">The place to be if you want to sing your heart out to amazing lyrics and funny GIFs.</p>
-                        <!--b class="text-muted">Share your happiness!</b-->
-                    <!-- </div>
-                </div> -->
-                <!-- End of Web Architechture -->  
-
-                <!-- Begin of User Interface Design and Development --> 
-                <!-- <div class="col-lg-3 col-lg-offset-1 col-sm-4">
-                    <div style="width :95%">
-                        <a href="travelbites.html" class="portfolio-box">
-                            <img src="img/travelbites.png"  class="img-responsive" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="portfolio-box-caption-content">
-                                    <div class="project-category text-faded">
-                                        User Interface Design and Development
-                                    </div>
-                                    <div class="project-name">
-                                        Travel Bites
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <h3 style="text-align: center">UX Reseacher</h3></br>
-                        <p class="text-muted" style="font-size: small">The app that allows you to plan your travel iternary around food.</p>
-                        <!--b class="text-muted">A fun user research project with great people with love for food!!</b-->
-                    <!-- </div>
-                </div> -->
-                <!-- End of User Interface Design and Development --> 
-
-                <!-- Begin of Natural Language Processing --> 
-                    <!-- <div class="col-lg-3 col-lg-offset-1 col-sm-4">
-                        <div style="width :95%">
-                            <a href="anlp.html" class="portfolio-box">
-                                <img src="img/anlp.png"  class="img-responsive" alt="">
-                                <div class="portfolio-box-caption">
-                                    <div class="portfolio-box-caption-content">
-                                        <div class="project-category text-faded">
-                                            Natural Language Processing
-                                        </div>
-                                        <div class="project-name">
-                                            Restaurant Ambience Tagger
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <h3 style="text-align: center">NLP Engineer</h3></br>
-                            <p class="text-muted" style="font-size: small">Classification model to assign these tags to restaurants based on non-linguistic as well as linguistic features.</p>
-                            <!--b class="text-muted">A fun user research project with great people with love for food!!</b-->
-                        <!-- </div>
-                    </div> -->
-                <!-- End of Natural Language Processing --> 
-
-
-                <!-- <div class="col-lg-3 col-lg-offset-1 col-sm-4">
-                    <div style="width :95%">
-                        <a href="cookcounty.html" class="portfolio-box">
-                            <img src="img/cookcounty.png"  class="img-responsive" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="portfolio-box-caption-content">
-                                    <div class="project-category text-faded">
-                                        Applied Data Analytics Project
-                                    </div>
-                                    <div class="project-name">
-                                        H&M 
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <h3 style="text-align: center">H&M Customer Segmentation</h3></br>
-                        <p class="text-muted" style="font-size: small"> Strategy and recommendations for John H Stroger Hospital in Chicago in light of Affordable Heath care Act.</p>
-                        <!--b class="text-muted">A fun user research project with great people with love for food!!</b-->
-                    <!-- </div>
-                </div> -->
-<!-- End of Natural Language Processing --> 
-
-
-
-            </div>
-        </div>
-    </section>
+      <div class="col-sm-4 project-column">
+        <article class="project-card">
+          <a class="project-media project-media-icon" href="hypertension-stroke.html" aria-label="View Hypertension and Stroke MSc Research">
+            <span class="fa fa-heartbeat" aria-hidden="true"></span>
+          </a>
+          <h3><a href="hypertension-stroke.html">Hypertension and Stroke — MSc Research</a></h3>
+          <p class="project-description">MSc Applied Statistics research using NHANES data. The project page is ready for methodology, results, and visualizations.</p>
+          <p class="project-status">Work in progress</p>
+        </article>
+      </div>
+      <div class="col-sm-4 project-column">
+        <article class="project-card">
+          <a class="project-media project-media-icon" href="billing-disputes-churn.html" aria-label="View Do Billing Disputes Cause Customer Churn">
+            <span class="fa fa-line-chart" aria-hidden="true"></span>
+          </a>
+          <h3><a href="billing-disputes-churn.html">Do Billing Disputes Cause Customer Churn?</a></h3>
+          <p class="project-description">A customer analytics project exploring whether billing disputes are associated with customer churn. Findings will be added later.</p>
+          <p class="project-status">Work in progress</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section id="contact">
         <div class="container">
